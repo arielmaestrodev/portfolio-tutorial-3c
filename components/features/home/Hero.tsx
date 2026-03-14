@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "@/components/common/Section";
@@ -32,25 +33,27 @@ export function Hero() {
                 </div>
 
                 <div className="flex items-center gap-4 text-muted-foreground">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                         <Github className="h-6 w-6" />
                         <span className="sr-only">GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    </Link>
+                    <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                         <Linkedin className="h-6 w-6" />
                         <span className="sr-only">LinkedIn</span>
-                    </a>
-                    <a href="mailto:hello@example.com" className="hover:text-foreground transition-colors">
+                    </Link>
+                    <Link href="mailto:hello@example.com" className="hover:text-foreground transition-colors">
                         <Mail className="h-6 w-6" />
                         <span className="sr-only">Email</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
             <div className="flex justify-center items-center">
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Coding Environment"
+                    width={500}
+                    height={500}
                     className="rounded-2xl shadow-2xl object-cover w-full max-w-[500px] aspect-square transform rotate-3 hover:rotate-0 transition-transform duration-500"
                 />
             </div>

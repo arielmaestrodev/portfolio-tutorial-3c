@@ -37,7 +37,7 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         </div>
       </div>
 
-      <div className="prose dark:prose-invert max-w-none">
+      <div className="prose darks:prose-invert max-w-none">
         <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
           {post.excerpt}
         </p>

@@ -10,5 +10,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
-  return <BlogPostContent post={post} />;
+  return (
+    <>
+      <BlogPostContent post={post} />
+    </>
+  );
 }

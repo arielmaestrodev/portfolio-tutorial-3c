@@ -7,6 +7,7 @@ export default async function BlogCategoryPage({ params }: Props) {
   const { slug } = await params;
   const activeCategories = slug || [];
   const mainCategory = activeCategories[activeCategories.length - 1];
+  console.log(slug)
   
   const filteredPosts = BLOG_POSTS.filter((post) => 
     post.category.some(cat => cat.toLowerCase() === mainCategory.toLowerCase())

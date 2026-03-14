@@ -10,6 +10,8 @@ export default async function BlogDatePage({ params }: Props) {
   const month = segments[1];
   const day = segments[2];
 
+  console.log(segments)
+
   const filteredPosts = BLOG_POSTS.filter((post) => {
     if (!year) return true;
     const postDate = new Date(post.date);

@@ -2,6 +2,8 @@
 import { Section } from "@/components/common/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function AboutHero() {
     return (
@@ -18,24 +20,26 @@ export function AboutHero() {
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                     <Button size="lg" className="group" asChild>
-                        <a href="/resume.pdf" download>
+                        <Link href="/resume.pdf" download>
                             <Download className="mr-2 h-4 w-4" />
                             Download Resume
-                        </a>
+                        </Link>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
-                        <a href="mailto:hello@example.com">
+                        <Link href="mailto:hello@example.com">
                             <Mail className="mr-2 h-4 w-4" />
                             Contact Me
-                        </a>
+                        </Link>
                     </Button>
                 </div>
             </div>
 
             <div className="flex justify-center items-center">
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Coding Environment"
+                    width={500}
+                    height={500}
                     className="rounded-2xl shadow-2xl object-cover w-full max-w-[500px] aspect-square transform rotate-3 hover:rotate-0 transition-transform duration-500"
                 />
             </div>

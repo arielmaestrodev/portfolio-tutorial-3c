@@ -1,8 +1,9 @@
-
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
-interface ProjectCardProps {
+type ProjectCardProps = {
     project: {
         title: string;
         category?: string;
@@ -22,9 +23,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <div className="relative aspect-video overflow-hidden rounded-md bg-gradient-to-br from-primary/20 via-primary/10 to-background border flex items-center justify-center shrink-0">
                 <div className="text-muted-foreground font-medium flex flex-col items-center gap-2">
                     <div className="rounded-full bg-background/50 backdrop-blur-sm">
-                        <img
+                        <Image
                             src={project.image}
                             alt={project.title}
+                            width={500}
+                            height={500}
                             className="w-full h-full object-cover"
                         />
                     </div>
@@ -57,16 +60,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 <div className="flex pt-4 mt-auto border-t">
                     <div className="flex gap-2 w-full">
                         <Button size="sm" className="flex-1" asChild>
-                            <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                            <Link href={project.links.github} target="_blank" rel="noopener noreferrer">
                                 <Github className="h-4 w-4 mr-2 shrink-0" />
                                 GitHub
-                            </a>
+                            </Link>
                         </Button>
                         <Button variant="outline" size="sm" className="flex-1" asChild>
-                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                            <Link href={project.links.demo} target="_blank" rel="noopener noreferrer">
                                 <ExternalLink className="h-4 w-4 mr-2 shrink-0" />
                                 Demo
-                            </a>
+                            </Link>
                         </Button>
                     </div>
                 </div>

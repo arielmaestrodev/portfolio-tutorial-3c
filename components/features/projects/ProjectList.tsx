@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -8,6 +7,7 @@ import { Section } from "@/components/common/Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { SectionHeading } from "@/components/common/SectionHeading";
 
 const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map(p => p.category)))];
 
@@ -27,13 +27,8 @@ export function ProjectList() {
 
     return (
         <Section className="space-y-12 min-h-screen">
-            <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">All Projects</h1>
-                <p className="text-muted-foreground md:text-xl/relaxed max-w-[700px]">
-                    A collection of projects I've built, ranging from web applications to mobile apps and more.
-                </p>
-            </div>
-
+            <SectionHeading title="All Projects" description="A collection of projects I've built, ranging from web applications to mobile apps and more." />
+            
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
                 <div className="flex flex-wrap gap-2">
                     {CATEGORIES.map((category) => (

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Section } from "@/components/common/Section";
+import Link from "next/link";
 
 export function Contact() {
     return (
@@ -13,10 +14,10 @@ export function Contact() {
                 </p>
 
                 <Button size="lg" asChild>
-                    <a href="mailto:hello@example.com">
+                    <Link href="mailto:hello@example.com">
                         <Mail className="mr-1 h-4 w-4" />
                         Say Hello
-                    </a>
+                    </Link>
                 </Button>
             </div>
         </Section>
